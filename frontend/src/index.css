@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #050507;
+    --bg-raised: #0B090C;
+    --surface: rgba(20, 12, 16, 0.82);
+    --surface-soft: rgba(35, 12, 20, 0.58);
+    --surface-strong: #160B10;
+    --text: #F5F1F2;
+    --text-muted: #A79BA0;
+    --text-subtle: #74676D;
+    --accent: #F20D45;
+    --accent-bright: #FF315B;
+    --accent-deep: #8E082C;
+    --border: rgba(255, 75, 112, 0.22);
+    --border-soft: rgba(255, 255, 255, 0.10);
+    --glow: rgba(255, 15, 65, 0.24);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: var(--bg);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Space Grotesk", "Inter", "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: #ffffff;
+  }
+}
+
+.glass-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 75, 112, 0.45);
+  box-shadow:
+    0 22px 54px rgba(0, 0, 0, 0.6),
+    0 0 24px var(--glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Custom styled scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(242, 13, 69, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(242, 13, 69, 0.6);
+}
+
+/* ========================================================================= */
+/* Animated Geometric Background Segment Smoke Flow (Unique per panel)       */
+/* ========================================================================= */
+@keyframes smokeFlow1 {
+  0%, 100% { transform: scale(1.02) translate(0px, 0px) rotate(0deg); }
+  50% { transform: scale(1.05) translate(-8px, 6px) rotate(-0.4deg); }
+}
+@keyframes smokeFlow2 {
+  0%, 100% { transform: scale(1.03) translate(0px, 0px) rotate(0deg); }
+  50% { transform: scale(1.06) translate(6px, -8px) rotate(0.6deg); }
+}
+@keyframes smokeFlow3 {
+  0%, 100% { transform: scale(1.02) translate(0px, 0px) rotate(0deg); }
+  50% { transform: scale(1.05) translate(-5px, -6px) rotate(-0.3deg); }
+}
+@keyframes smokeFlow4 {
+  0%, 100% { transform: scale(1.03) translate(0px, 0px) rotate(0deg); }
+  50% { transform: scale(1.06) translate(8px, 5px) rotate(0.5deg); }
+}
+@keyframes smokeFlow5 {
+  0%, 100% { transform: scale(1.02) translate(0px, 0px) rotate(0deg); }
+  50% { transform: scale(1.05) translate(-6px, 8px) rotate(-0.4deg); }
+}
+@keyframes smokeFlow6 {
+  0%, 100% { transform: scale(1.03) translate(0px, 0px) rotate(0deg); }
+  50% { transform: scale(1.06) translate(5px, 6px) rotate(0.5deg); }
+}
+
+.panel-smoke-1 { animation: smokeFlow1 20s ease-in-out infinite; transform-origin: 25% 50%; }
+.panel-smoke-2 { animation: smokeFlow2 15s ease-in-out infinite; transform-origin: 45% 20%; }
+.panel-smoke-3 { animation: smokeFlow3 17s ease-in-out infinite; transform-origin: 75% 35%; }
+.panel-smoke-4 { animation: smokeFlow4 14s ease-in-out infinite; transform-origin: 85% 25%; }
+.panel-smoke-5 { animation: smokeFlow5 18s ease-in-out infinite; transform-origin: 65% 65%; }
+.panel-smoke-6 { animation: smokeFlow6 16s ease-in-out infinite; transform-origin: 88% 65%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .panel-smoke-1, .panel-smoke-2, .panel-smoke-3,
+  .panel-smoke-4, .panel-smoke-5, .panel-smoke-6 {
+    animation: none !important;
+  }
+}
+
+/* ========================================================================= */
+/* Animated continuous traveling crimson navigation line                     */
+/* ========================================================================= */
+@keyframes navTravelHorizontal {
+  0% {
+    left: -20%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes navTravelVertical {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-nav-travel-h {
+  animation: navTravelHorizontal 3.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-nav-travel-v {
+  animation: navTravelVertical 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-nav-travel-h,
+  .animate-nav-travel-v {
+    animation: none !important;
+  }
+}

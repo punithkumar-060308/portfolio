@@ -1,0 +1,35 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+venv/
+ENV/
+.pytest_cache/
+
+# Node & Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Editor & System
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Testing & screenshots
+tests/e2e/screenshots/
+*.png
+test-*.js
+
