@@ -260,7 +260,7 @@ export const Hero: React.FC = () => {
 
   return (
     <div ref={containerRef} id="hero-scroll-container" className="relative w-full overflow-hidden">
-      <section className="relative pt-20 sm:pt-24 lg:pt-28 pb-8 sm:pb-12 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-16 sm:pt-20 lg:pt-20 pb-4 sm:pb-6 lg:pb-6 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
 
         {/* ========================================================================= */}
         {/* 1. DESKTOP 3D SHATTERED GLASS SCENE (Visible on lg: >= 1024px)            */}
@@ -270,7 +270,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="glass-scene relative hidden lg:flex w-full max-w-[1440px] min-h-[660px] xl:min-h-[700px] items-center overflow-visible bg-transparent pointer-events-none"
+          className="glass-scene relative hidden lg:flex w-[88vw] xl:w-[90vw] max-w-[1540px] 2xl:max-w-[1650px] h-[650px] xl:h-[680px] items-center justify-center overflow-visible bg-transparent pointer-events-none mx-auto"
           style={{
             perspective: "1400px",
             transformStyle: "preserve-3d",
@@ -429,14 +429,14 @@ export const Hero: React.FC = () => {
               hasEnergyHalo={false}
               isTextPanel={true}
             >
-              <div className="w-full max-w-xl lg:max-w-[42%] px-6 sm:px-10 lg:px-14 xl:px-16 py-8 sm:py-12 flex flex-col items-start justify-center text-left pointer-events-none">
+              <div className="w-full max-w-xl lg:max-w-[45%] xl:max-w-[44%] px-6 sm:px-10 lg:px-12 xl:px-16 py-8 sm:py-10 flex flex-col items-start justify-center text-left pointer-events-none">
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.45 }}
                   className="mb-2 sm:mb-3 pointer-events-none select-none"
                 >
-                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] text-[#E5163E] drop-shadow-[0_0_12px_rgba(229,22,62,0.7)]">
+                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.24em] text-[#E5163E] drop-shadow-[0_0_12px_rgba(229,22,62,0.7)]">
                     AI/ML DEVELOPER
                   </span>
                 </motion.div>
@@ -445,7 +445,7 @@ export const Hero: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.65 }}
-                  className="text-6xl lg:text-8xl xl:text-9xl font-black uppercase tracking-tight text-white leading-none whitespace-nowrap mb-1 select-none drop-shadow-[0_6px_30px_rgba(0,0,0,0.95)] pointer-events-none"
+                  className="text-6xl sm:text-7xl lg:text-[5.5rem] xl:text-[7.25rem] 2xl:text-[8.25rem] font-black uppercase tracking-tight text-white leading-[0.92] whitespace-nowrap mb-1 select-none drop-shadow-[0_6px_30px_rgba(0,0,0,0.95)] pointer-events-none"
                 >
                   PUNITH
                 </motion.h1>
@@ -454,16 +454,16 @@ export const Hero: React.FC = () => {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.80 }}
-                  className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-[0.28em] text-[#C8BEC3] mb-3 select-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)] pointer-events-none"
+                  className="text-xl sm:text-2xl lg:text-[1.65rem] xl:text-3xl font-black uppercase tracking-[0.3em] text-[#C8BEC3] mb-3 select-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)] pointer-events-none"
                 >
-                  KUMAR BS
+                  KUMAR B S
                 </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.95 }}
-                  className="text-sm sm:text-base lg:text-lg font-black uppercase tracking-[0.14em] text-white mb-3 flex flex-wrap items-center gap-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] pointer-events-none select-none"
+                  className="text-base sm:text-lg lg:text-xl font-black uppercase tracking-[0.16em] text-white mb-3.5 flex flex-wrap items-center gap-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] pointer-events-none select-none"
                 >
                   <span>AI/ML DEVELOPER</span>
                 </motion.div>
@@ -472,7 +472,7 @@ export const Hero: React.FC = () => {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.10 }}
-                  className="text-sm sm:text-base text-[#D4C8CD] font-normal leading-relaxed max-w-lg mb-6 sm:mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] pointer-events-none select-none"
+                  className="text-sm sm:text-base lg:text-[1.05rem] text-[#D4C8CD] font-normal leading-relaxed max-w-lg mb-7 xl:mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] pointer-events-none select-none"
                 >
                   Building intelligent systems that solve real-world problems.
                 </motion.p>
@@ -485,14 +485,14 @@ export const Hero: React.FC = () => {
                 >
                   <a
                     href="#projects"
-                    className="group relative inline-flex items-center justify-center bg-[#0c0508] text-white font-black text-xs sm:text-sm uppercase tracking-[0.16em] px-8 sm:px-9 py-3 sm:py-3.5 rounded-full border-2 border-[#E5163E] shadow-[0_0_24px_rgba(229,22,62,0.7)] hover:shadow-[0_0_38px_rgba(255,36,77,0.95)] hover:bg-[#E5163E] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer select-none"
+                    className="group relative inline-flex items-center justify-center bg-[#0c0508] text-white font-black text-xs sm:text-sm uppercase tracking-[0.18em] px-8 sm:px-9 xl:px-10 py-3.5 sm:py-4 xl:py-4 rounded-full border-2 border-[#E5163E] shadow-[0_0_24px_rgba(229,22,62,0.7)] hover:shadow-[0_0_38px_rgba(255,36,77,0.95)] hover:bg-[#E5163E] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer select-none"
                   >
                     <span>EXPLORE MY WORK</span>
                   </a>
 
                   <a
                     href="#contact"
-                    className="inline-flex items-center justify-center bg-[rgba(20,10,15,0.7)] hover:bg-[rgba(35,16,25,0.9)] text-white font-black text-xs sm:text-sm uppercase tracking-[0.16em] px-8 sm:px-9 py-3 sm:py-3.5 rounded-full border border-white/20 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer select-none backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.4)]"
+                    className="inline-flex items-center justify-center bg-[rgba(20,10,15,0.7)] hover:bg-[rgba(35,16,25,0.9)] text-white font-black text-xs sm:text-sm uppercase tracking-[0.18em] px-8 sm:px-9 xl:px-10 py-3.5 sm:py-4 xl:py-4 rounded-full border border-white/20 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer select-none backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.4)]"
                   >
                     <span>GET IN TOUCH</span>
                   </a>
@@ -550,7 +550,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="relative w-[260px] sm:w-[300px] h-[310px] sm:h-[360px] rounded-2xl overflow-hidden border border-[rgba(255,75,112,0.35)] shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_25px_rgba(255,23,68,0.3)] backdrop-blur-md mb-6 sm:mb-8"
+            className="relative w-[270px] sm:w-[320px] md:w-[360px] h-[320px] sm:h-[380px] md:h-[430px] rounded-2xl overflow-hidden border border-[rgba(255,75,112,0.35)] shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_25px_rgba(255,23,68,0.3)] backdrop-blur-md mb-6 sm:mb-8"
           >
             {/* Background Obsidian & Smoke Texture */}
             <div className="absolute inset-0 bg-[#060205]" />
@@ -591,7 +591,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-5xl sm:text-7xl font-black uppercase tracking-tight text-white leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]"
+              className="text-5xl sm:text-7xl md:text-8xl font-black uppercase tracking-tight text-white leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]"
             >
               PUNITH
             </motion.h1>
@@ -600,7 +600,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg sm:text-2xl font-black uppercase tracking-[0.28em] text-[#C8BEC3] mt-1 mb-2.5 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
+              className="text-lg sm:text-2xl md:text-3xl font-black uppercase tracking-[0.28em] text-[#C8BEC3] mt-1 mb-2.5 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
             >
               KUMAR B S
             </motion.div>

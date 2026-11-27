@@ -27,10 +27,10 @@ export const MosaicPanel: React.FC<MosaicPanelProps> = ({
   hasEnergyHalo = false,
   hasPortrait = false,
   isTextPanel = false,
-  portraitX = 780,
-  portraitY = 50,
-  portraitWidth = 560,
-  portraitHeight = 670,
+  portraitX = 745,
+  portraitY = 30,
+  portraitWidth = 635,
+  portraitHeight = 755,
   children,
 }) => {
   const panelRef = useRef<HTMLDivElement | null>(null);
@@ -356,9 +356,9 @@ export const MosaicPanel: React.FC<MosaicPanelProps> = ({
           {hasEnergyHalo && (
             <ellipse
               cx="1060"
-              cy="250"
-              rx="280"
-              ry="280"
+              cy="245"
+              rx="315"
+              ry="315"
               fill="url(#coreGlowGradient)"
               className="animate-pulse-slow pointer-events-none"
               opacity="0.85"
