@@ -378,6 +378,7 @@ export const MosaicPanel: React.FC<MosaicPanelProps> = ({
               {/* Subtle Red Rim Light Silhouette behind Hair & Shoulders */}
               <image
                 href="/punith-portrait-final.png"
+                xlinkHref="/punith-portrait-final.png"
                 x={portraitX}
                 y={portraitY}
                 width={portraitWidth}
@@ -389,6 +390,7 @@ export const MosaicPanel: React.FC<MosaicPanelProps> = ({
               {/* Original High-Res Portrait */}
               <image
                 href="/punith-portrait-final.png"
+                xlinkHref="/punith-portrait-final.png"
                 x={portraitX}
                 y={portraitY}
                 width={portraitWidth}

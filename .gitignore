@@ -30,6 +30,6 @@ Thumbs.db
 
 # Testing & screenshots
 tests/e2e/screenshots/
-*.png
+tests/**/*.png
 test-*.js
 
